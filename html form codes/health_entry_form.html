@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Record Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6ffe6;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #33cc33;
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            color: #009900;
+        }
+        input[type="text"],
+        textarea,
+        input[type="submit"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #33cc33;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #33cc33;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <h2>Health Record Entry</h2>
+    <form action="insert_health.php" method="POST">
+        <label for="healthID">Health ID:</label>
+        <input type="text" name="healthID" id="healthID" required>
+
+        <label for="medicalRecords">Medical Records:</label>
+        <textarea name="medicalRecords" id="medicalRecords" rows="5" required></textarea>
+
+        <label for="staffID">Staff ID:</label>
+        <input type="text" name="staffID" id="staffID" required>
+
+        <input type="submit" value="Add Health Record">
+    </form>
+</body>
+</html>
