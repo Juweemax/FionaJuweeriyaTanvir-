@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6ffe6; /* Light green background */
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #33cc33; /* Darker green for the heading */
+            text-align: center;
+        }
+        form {
+            max-width: 500px; /* Set a max width for the form */
+            margin: 0 auto; /* Center the form */
+            padding: 20px;
+            background-color: #fff; /* White background for the form */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+        label {
+            font-weight: bold;
+            display: block; /* Make labels block elements */
+            margin: 10px 0 5px; /* Spacing for labels */
+            color: #009900; /* Green color for labels */
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="decimal"],
+        input[type="date"],
+        select,
+        input[type="submit"] {
+            width: 90%; /* Adjust width to 90% */
+            padding: 10px; /* Padding for inputs */
+            margin-bottom: 15px; /* Spacing below inputs */
+            border: 2px solid #33cc33; /* Green border */
+            border-radius: 4px; /* Rounded corners */
+            font-size: 16px; /* Increase font size */
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+        input[type="submit"] {
+            background-color: #33cc33; /* Green background for the button */
+            color: white; /* White text color */
+            cursor: pointer; /* Pointer cursor on hover */
+            border: none; /* No border */
+        }
+        input[type="submit"]:hover {
+            background-color: #28a745; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Staff</h2>
+    <form action="insert_staff.php" method="POST">
+        <label for="staffID">Staff ID:</label>
+        <input type="text" name="staffID" id="staffID" maxlength="5" required>
+
+        <label for="staffSalary">Staff Salary (in Malaysian Ringgits, RM):</label>
+        <input type="decimal" name="staffSalary" id="staffSalary" required>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" required>
+
+        <label for="ic">IC:</label>
+        <input type="text" name="ic" id="ic" required>
+
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address" required>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" name="phoneNumber" id="phoneNumber" required>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" min="1">
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="departmentID">Department ID:</label>
+        <input type="text" name="departmentID" id="departmentID" maxlength="4" required>
+
+        <label for="insurance">Insurance Coverage (in Malaysian Ringgits, RM):</label>
+        <input type="decimal" name="insurance" id="insurance" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob" required>
+
+        <input type="submit" value="Add Staff">
+    </form>
+</body>
+</html>
+
