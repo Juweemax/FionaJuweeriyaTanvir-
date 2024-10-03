@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Rating Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0fff0;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #2e8b57;
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            color: #006400;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="submit"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #2e8b57;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #2e8b57;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #228b22;
+        }
+    </style>
+</head>
+<body>
+    <h2>Performance Rating Entry Form</h2>
+    <form action="insert_performance.php" method="POST">
+        <label for="PerformanceID">Performance ID:</label>
+        <input type="text" name="PerformanceID" id="PerformanceID" maxlength="5" required>
+
+        <label for="Rating">Rating (0-100):</label>
+        <input type="number" name="Rating" id="Rating" min="0" max="100" required>
+
+        <label for="Date">Date:</label>
+        <input type="date" name="Date" id="Date" required>
+
+        <label for="StaffID">Staff ID:</label>
+        <input type="text" name="StaffID" id="StaffID" maxlength="5" required>
+
+        <input type="submit" value="Submit Performance Rating">
+    </form>
+</body>
+</html>
+

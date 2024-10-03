@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Entry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6ffe6; /* Light green background */
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #33cc33; /* Darker green for heading */
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            color: #009900; /* Green color for labels */
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="submit"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #33cc33; /* Green border */
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #33cc33; /* Green button */
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        input[type="submit"]:hover {
+            background-color: #28a745; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Payroll Entry</h2>
+    <form action="insert_payroll.php" method="POST">
+        <label for="payrollID">Payroll ID:</label>
+        <input type="text" name="payrollID" id="payrollID" required>
+
+        <label for="payPeriod">Pay Period:</label>
+        <input type="date" name="payPeriod" id="payPeriod" required>
+
+        <label for="incomeTax">Income Tax (MYR):</label>
+        <input type="number" name="incomeTax" id="incomeTax" step="0.01" required>
+
+        <label for="allowance">Allowance (MYR):</label>
+        <input type="number" name="allowance" id="allowance" step="0.01" required>
+
+        <label for="deductions">Deductions (MYR):</label>
+        <input type="number" name="deductions" id="deductions" step="0.01" required>
+
+        <label for="overtimeHours">Overtime Hours:</label>
+        <input type="number" name="overtimeHours" id="overtimeHours" required>
+
+        <label for="staffID">Staff ID:</label>
+        <input type="text" name="staffID" id="staffID" required>
+
+        <label for="salaryID">Salary ID:</label>
+        <input type="text" name="salaryID" id="salaryID" required>
+
+        <label for="performanceID">Performance ID:</label>
+        <input type="text" name="performanceID" id="performanceID" required>
+
+        <input type="submit" value="Add Payroll Entry">
+    </form>
+</body>
+</html>
+
+
+
+
+
